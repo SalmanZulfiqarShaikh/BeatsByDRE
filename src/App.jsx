@@ -1,5 +1,6 @@
 import React from 'react'
-import './App.css'
+import './index.css'
+import { Hero, Popular, Services, SpecialOffer, SuperQuality, Subscribe, Testimonials, Footer } from './sections'
 
 function App() {
 
