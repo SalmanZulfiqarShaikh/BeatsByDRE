@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import arrowRight from '../assets/icons/arrow-right.svg'
-import { statistics } from '../constants/index.js'
+import { statistics, headphones } from '../constants/index.js'
 import CountUp from 'react-countup'
-import { HPhero1 } from '../assets/images/index.js'
+import { useInView } from 'react-intersection-observer'
 
 function Hero() {
+  const [bigHP, setBigHP] = useState(headphones[0].bigHP)
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 })
+
   return (
     <section
       id="home"
@@ -30,39 +33,54 @@ function Hero() {
         </div>
 
         {/* Stats Section */}
-        <div className="flex flex-nowrap justify-between items-center w-full mt-16 gap-6">
+        <div
+          ref={ref}
+          className="flex justify-between items-center w-full mt-16 gap-4 text-xs sm:text-sm md:text-base lg:text-lg flex-nowrap"
+        >
           {statistics.map((stat, index) => (
-            <div key={index} className="flex-1 min-w-0 text-center">
-              <p className="text-3xl font-semibold truncate">
-                <CountUp start={0} end={stat.value} duration={1.5} suffix={stat.suffix} />
+            <div
+              key={index}
+              className="flex-1 min-w-[60px] text-center"
+            >
+              <p className="text-2xl sm:text-3xl md:text-3xl font-semibold">
+                {inView ? (
+                  <CountUp start={0} end={stat.value} duration={0.9} suffix={stat.suffix} />
+                ) : (
+                  0
+                )}
               </p>
-              <p className="text-gray-400 truncate">{stat.label}</p>
+              <p className="text-gray-400 text-sm sm:text-base truncate">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* RIGHT IMAGE SECTION */}
-      <div className='hidden md:block'>
+      <div className='hidden md:flex mt-12 relative flex-col items-center'>
+        {/* Main Headphone Image */}
         <img 
-          src={HPhero1}
+          src={bigHP}
           alt="collection"
           width={540}
+          className="relative z-10"
         />
 
-        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
-          {shoes.map((image, index) => (
-            <div key={index}>
-              <ShoeCard
-                index={index}
-                imgURL={image}
-                changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
-                bigShoeImg={bigShoeImg}
-              />
-            </div>
+        {/* Thumbnails */}
+        <div className='flex sm:gap-6 gap-4 mt-6'>
+          {headphones.map((hp, index) => (
+            <img
+              key={index}
+              src={hp.bigHP}
+              alt={`headphone ${index + 1}`}
+              onClick={() => setBigHP(hp.bigHP)}
+              className={`w-20 h-20 rounded-lg border-4 cursor-pointer transition-all duration-300 ${
+                bigHP === hp.bigHP
+                  ? 'border-pink-500'
+                  : 'border-transparent hover:border-pink-500'
+              }`}
+            />
           ))}
         </div>
-        
       </div>
     </section>
   )
