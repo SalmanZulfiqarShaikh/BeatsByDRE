@@ -1,33 +1,31 @@
 // import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-// import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+// import { HPhero1, HPhero2,HPhero3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailHP1, thumbnailHP2, thumbnailHP3 } from "../assets/images";
+import { HPhero1, HPhero2, HPhero3 } from "../assests/images";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
-    { href: "#contact-us", label: "Contact Us" },
+  { href: "#home", label: "Home" },
+  { href: "#about-us", label: "About Us" },
+  { href: "#products", label: "Products" },
+  { href: "#contact-us", label: "Contact Us" },
 ];
 
-// export const headphones = [
-//     {
-//         thumbnail: thumbnailShoe1,
-//         bigShoe: bigShoe1,
-//     },
-//     {
-//         thumbnail: thumbnailShoe2,
-//         bigShoe: bigShoe2,
-//     },
-//     {
-//         thumbnail: thumbnailShoe3,
-//         bigShoe: bigShoe3,
-//     },
-// ];
+export const headphones = [
+  {
+    bigHP: HPhero1,
+  },
+  {
+    bigHP: HPhero2,
+  },
+  {
+    bigHP: HPhero3,
+  },
+];
 
-// export const statistics = [
-//     { value: 950, suffix: "+", label: "Brands" },
-//     { value: 800, suffix: "+", label: "Shops" },
-//     { value: 400, suffix: "k+", label: "Customers" },
-//   ];
+export const statistics = [
+  { value: 950, suffix: "k+", label: "Customers" },
+  { value: 800, suffix: "+", label: "Shops" },
+  { value: 37, suffix: "M+", label: "Followers" },
+];
 
 // export const products = [
 //     {
@@ -84,7 +82,6 @@ export const navLinks = [
 //         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
 //     }
 // ];
-
 
 // export const footerLinks = [
 //     {

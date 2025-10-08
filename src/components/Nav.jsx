@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../index.css'
-import favicon from '../assests/favicon.svg'
-import hamburger from '../assests/hamburger.png'
+import favicon from '../assests/images/favicon.svg'
+import hamburger from '../assests/icons/hamburger.png'
 import { navLinks } from '../constants'
 
 function Nav() {
