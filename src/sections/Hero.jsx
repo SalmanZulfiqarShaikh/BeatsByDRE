@@ -1,24 +1,18 @@
 import React from 'react'
 import Button from '../components/Button'
-import arrowRight from '../assests/icons/arrow-right.svg'
+import arrowRight from '../assets/icons/arrow-right.svg'
 import { statistics } from '../constants/index.js'
 import CountUp from 'react-countup'
-import { useInView } from 'react-intersection-observer'
-// import HPhero1 from '../assests/images/HPhero1.png'
+import { HPhero1 } from '../assets/images/index.js'
 
 function Hero() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  })
-
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-between items-center min-h-screen gap-10 max-container"
+      className="relative w-full flex xl:flex-row flex-col justify-between items-center min-h-screen gap-10 max-container overflow-hidden"
     >
       {/* LEFT TEXT SECTION */}
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
+      <div className="relative xl:w-2/5 flex md:ml-14 flex-col justify-center items-start w-full max-xl:px-8 pt-28 z-20">
         <h1 className="text-5xl sm:text-6xl font-bold leading-tight mt-4">
           <span className="text-white">Next-Level Arrivals</span>
           <br />
@@ -35,39 +29,40 @@ function Hero() {
           <Button label="Shop Now" iconURL={arrowRight} />
         </div>
 
-        <div
-          ref={ref}
-          className="flex justify-start items-start flex-wrap w-full mt-20 gap-16 cursor-pointer transition-opacity duration-700"
-        >
+        {/* Stats Section */}
+        <div className="flex flex-nowrap justify-between items-center w-full mt-16 gap-6">
           {statistics.map((stat, index) => (
-            <div key={index}>
-              <p className="text-3xl font-semibold">
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={stat.value}
-                    duration={1.5}
-                    suffix={stat.suffix}
-                  />
-                ) : (
-                  0
-                )}
+            <div key={index} className="flex-1 min-w-0 text-center">
+              <p className="text-3xl font-semibold truncate">
+                <CountUp start={0} end={stat.value} duration={1.5} suffix={stat.suffix} />
               </p>
-              <p className="text-gray-400">{stat.label}</p>
+              <p className="text-gray-400 truncate">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* RIGHT IMAGE SECTION */}
-      <div className="flex justify-center items-center relative xl:w-3/5 w-full">
-        <img
+      <div className='hidden md:block'>
+        <img 
           src={HPhero1}
-          alt="headphones collection"
-          width={610}
-          height={500}
-          className="object-contain relative z-10 drop-shadow-[0_0_25px_rgba(255,105,180,0.3)]"
+          alt="collection"
+          width={540}
         />
+
+        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
+          {shoes.map((image, index) => (
+            <div key={index}>
+              <ShoeCard
+                index={index}
+                imgURL={image}
+                changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
+                bigShoeImg={bigShoeImg}
+              />
+            </div>
+          ))}
+        </div>
+        
       </div>
     </section>
   )

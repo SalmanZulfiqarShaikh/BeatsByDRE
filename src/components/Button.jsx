@@ -1,5 +1,5 @@
 import React from 'react'
-import arrowRight from '../assests/icons/arrow-right.svg'
+import arrowRight from '../assets/icons/arrow-right.svg'
 
 function Button({label, iconURL}) {
   return (
