@@ -1,6 +1,6 @@
 // import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 // import { HPhero1, HPhero2,HPhero3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailHP1, thumbnailHP2, thumbnailHP3 } from "../assets/images";
-import { HPhero1, HPhero2, HPhero3 } from "../assets/images";
+import { HPhero1, HPhero2, HPhero3, product1, product2, product3, product4, product5 } from "../assets/images";
 
 
 export const navLinks = [
@@ -28,28 +28,33 @@ export const statistics = [
   { value: 37, suffix: "M+", label: "Followers" },
 ];
 
-// export const products = [
-//     {
-//         imgURL: shoe4,
-//         name: "Nike Air Jordan-01",
-//         price: "$200.20",
-//     },
-//     {
-//         imgURL: shoe5,
-//         name: "Nike Air Jordan-10",
-//         price: "$210.20",
-//     },
-//     {
-//         imgURL: shoe6,
-//         name: "Nike Air Jordan-100",
-//         price: "$220.20",
-//     },
-//     {
-//         imgURL: shoe7,
-//         name: "Nike Air Jordan-001",
-//         price: "$230.20",
-//     },
-// ];
+export const products = [
+    {
+        imgURL: product1,
+        name: "Beats Studio Pro",
+        price: "$349.99",
+    },
+    {
+        imgURL: product2,
+        name: "Beats Fit Pro",
+        price: "$199.99",
+    },
+    {
+        imgURL: product3,
+        name: "Beats Flex",
+        price: "$69.99",
+    },
+    {
+        imgURL: product4,
+        name: "Beats Solo 4",
+        price: "$199.99",
+    },
+    {
+        imgURL: product5,
+        name: "Beats Pill",
+        price: "$149.99",
+    }
+];
 
 // export const services = [
 //     {
