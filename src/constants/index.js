@@ -114,39 +114,39 @@ export const reviews = [
 ];
 
 
-// export const footerLinks = [
-//     {
-//         title: "Products",
-//         links: [
-//             { name: "Beats Studio Pro", link: "/" },
-//             { name: "Powerbeats Pro 2", link: "/" },
-//             { name: "Beats Flex", link: "/" },
-//             { name: "Beats Fit Pro", link: "/" },
-//             { name: "Powerbeats Fit", link: "/" },
-//             { name: "Beats Pill", link: "/" },
-//         ],
-//     },
-//     {
-//         title: "Help",
-//         links: [
-//             { name: "About us", link: "/" },
-//             { name: "FAQs", link: "/" },
-//             { name: "Refund policy", link: "/" },
-//             { name: "Privacy policy", link: "/" },
-//             { name: "Payment options", link: "/" },
-//         ],
-//     },
-//     {
-//         title: "Get in touch",
-//         links: [
-//             { name: "customer@beatsbydre.com", link: "mailto:salmanzulfiqar04@gmail.com" },
-//             { name: "+923357947721", link: "tel:+923357947721" },
-//         ],
-//     },
-// ];
+export const footerLinks = [
+    {
+        title: "Products",
+        links: [
+            { name: "Beats Studio Pro", link: "/" },
+            { name: "Powerbeats Pro 2", link: "/" },
+            { name: "Beats Flex", link: "/" },
+            { name: "Beats Fit Pro", link: "/" },
+            { name: "Powerbeats Fit", link: "/" },
+            { name: "Beats Pill", link: "/" },
+        ],
+    },
+    {
+        title: "Help",
+        links: [
+            { name: "About us", link: "/" },
+            { name: "FAQs", link: "/" },
+            { name: "Refund policy", link: "/" },
+            { name: "Privacy policy", link: "/" },
+            { name: "Payment options", link: "/" },
+        ],
+    },
+    {
+        title: "Get in touch",
+        links: [
+            { name: "customer@beatsbydre.com", link: "https://mail.google.com/mail/u/0/?to=salmanzulfiqar04@gmail.com&fs=1&tf=cm" },
+            { name: "+923357947721", link: "tel:+923357947721" },
+        ],
+    },
+];
 
-// export const socialMedia = [
-//     { src: linkedin, alt: "Linkedin logo" },
-//     { src: github, alt: "Github logo" },
-//     { src: instagram, alt: "Instagram logo" },
-// ];
+export const socialMedia = [
+  { name: "LinkedIn", icon: "FaLinkedin", link: "https://linkedin.com/in/salmanzulfiqarshaikh" },
+  { name: "GitHub", icon: "FaGithub", link: "https://github.com/salmanzulfiqarshaikh" },
+  { name: "Instagram", icon: "FaInstagram", link: "https://instagram.com/salmanzulfiqar_" },
+];
