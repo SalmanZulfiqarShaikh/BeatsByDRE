@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,9 +9,14 @@ import { products } from "../constants";
 
 function Popular() {
   return (
-    <section
-      className="w-full max-container mt-20 overflow-hidden"
+    <motion.section
       id="products"
+      className="w-full max-container mt-20 overflow-hidden"
+      //  Framer Motion animation settings
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.3 }} // triggers when 30% is visible, also animates on scroll up
     >
       {/* Header */}
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:px-8 z-20 md:ml-14">
@@ -37,7 +43,7 @@ function Popular() {
           }}
           pagination={{
             clickable: true,
-            el: ".custom-pagination", //  custom container for dots
+            el: ".custom-pagination",
           }}
           loop={true}
           spaceBetween={25}
@@ -91,7 +97,7 @@ function Popular() {
           ))}
         </Swiper>
 
-        {/* External Arrows (slightly out of slider) */}
+        {/* Arrows */}
         <div className="absolute inset-y-0 left-[4px] flex items-center justify-center z-30">
           <button className="cursor-pointer custom-prev text-3xl text-pink-500 hover:text-orange-400 transition-all duration-300">
             ❮
@@ -103,7 +109,7 @@ function Popular() {
           </button>
         </div>
 
-        {/*  Pagination placed outside cards */}
+        {/* Pagination */}
         <div className="custom-pagination flex justify-center mt-10"></div>
       </div>
 
@@ -120,7 +126,7 @@ function Popular() {
           border-radius: 8px;
         }
       `}</style>
-    </section>
+    </motion.section>
   );
 }
 

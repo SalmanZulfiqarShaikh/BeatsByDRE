@@ -5,8 +5,9 @@ import { HPhero1, HPhero2, HPhero3, product1, product2, product3, product4, prod
 
 export const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about-us", label: "About Us" },
   { href: "#products", label: "Products" },
+  { href: "#about-us", label: "About Us" },
+  {href: '#services', label: "Services"},
   { href: "#contact-us", label: "Contact Us" },
 ];
 
@@ -98,12 +99,12 @@ export const services = [
 //     {
 //         title: "Products",
 //         links: [
-//             { name: "Air Force 1", link: "/" },
-//             { name: "Air Max 1", link: "/" },
-//             { name: "Air Jordan 1", link: "/" },
-//             { name: "Air Force 2", link: "/" },
-//             { name: "Nike Waffle Racer", link: "/" },
-//             { name: "Nike Cortez", link: "/" },
+//             { name: "Beats Studio Pro", link: "/" },
+//             { name: "Powerbeats Pro 2", link: "/" },
+//             { name: "Beats Flex", link: "/" },
+//             { name: "Beats Fit Pro", link: "/" },
+//             { name: "Powerbeats Fit", link: "/" },
+//             { name: "Beats Pill", link: "/" },
 //         ],
 //     },
 //     {
@@ -111,22 +112,22 @@ export const services = [
 //         links: [
 //             { name: "About us", link: "/" },
 //             { name: "FAQs", link: "/" },
-//             { name: "How it works", link: "/" },
+//             { name: "Refund policy", link: "/" },
 //             { name: "Privacy policy", link: "/" },
-//             { name: "Payment policy", link: "/" },
+//             { name: "Payment options", link: "/" },
 //         ],
 //     },
 //     {
 //         title: "Get in touch",
 //         links: [
-//             { name: "customer@beatsbydre.com", link: "mailto:customer@beatsbydre.com" },
+//             { name: "customer@beatsbydre.com", link: "mailto:salmanzulfiqar04@gmail.com" },
 //             { name: "+923357947721", link: "tel:+923357947721" },
 //         ],
 //     },
 // ];
 
 // export const socialMedia = [
-//     { src: facebook, alt: "facebook logo" },
-//     { src: twitter, alt: "twitter logo" },
-//     { src: instagram, alt: "instagram logo" },
+//     { src: linkedin, alt: "Linkedin logo" },
+//     { src: github, alt: "Github logo" },
+//     { src: instagram, alt: "Instagram logo" },
 // ];

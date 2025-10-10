@@ -12,6 +12,7 @@ function App() {
       <Popular />
       <About/>
       <Services />
+      <SpecialOffer/>
     </>
   )
 }

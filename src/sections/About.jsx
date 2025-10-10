@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Button from "../components/Button";
+import { motion } from "framer-motion";
 import arrowRight from "../assets/icons/arrow-right.svg";
 import messivideo from "../assets/videos/messivideo.mp4";
 
@@ -27,10 +28,14 @@ const About = () => {
   }, []);
 
   return (
-    <section
+     <motion.section
+      //  Framer Motion animation settings
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.3 }} // triggers when 30% is visible, also animates on scroll up
       id="about-us"
-      className="flex justify-between items-center max-lg:flex-col gap-12 w-full max-container py-20 px-6 md:px-12"
-    >
+      className="flex justify-between items-center max-lg:flex-col gap-12 w-full max-container py-20 px-6 md:px-12" >
       {/* TEXT SECTION */}
       <div className="flex flex-1 flex-col md:ml-14 text-left">
         <h2 className="font-palanquin capitalize text-5xl lg:text-6xl font-bold leading-snug">
@@ -73,7 +78,7 @@ const About = () => {
           }}
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

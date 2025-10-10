@@ -49,3 +49,5 @@ const Typing = () => {
 };
 
 export default Typing;
+
+// ill be honest this is ai generated
