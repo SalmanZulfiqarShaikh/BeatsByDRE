@@ -1,6 +1,6 @@
 import {shieldTick, support, truckFast } from "../assets/icons";
 // import { HPhero1, HPhero2,HPhero3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailHP1, thumbnailHP2, thumbnailHP3 } from "../assets/images";
-import { HPhero1, HPhero2, HPhero3, product1, product2, product3, product4, product5 } from "../assets/images";
+import { HPhero1, HPhero2, HPhero3, product1, product2, product3, product4, product5,customer1, customer2,customer3, customer4,customer5 } from "../assets/images";
 
 
 export const navLinks = [
@@ -80,20 +80,39 @@ export const services = [
     },
 ];
 
-// export const reviews = [
-//     {
-//         imgURL: customer1,
-//         customerName: 'Salman Shaikh',
-//         rating: 4.5,
-//         feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
-//     },
-//     {
-//         imgURL: customer2,
-//         customerName: 'Lota Mongeskar',
-//         rating: 4.5,
-//         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
-//     }
-// ];
+export const reviews = [
+  {
+    imgURL: customer1,
+    customerName: 'Salman Shaikh',
+    rating: 4.8,
+    feedback: "Absolutely love the product! The quality and design blew me away. Will definitely order again."
+  },
+  {
+    imgURL: customer2, 
+    customerName: 'Sophia Martinez',
+    rating: 5.0,
+    feedback: "Everything arrived perfectly and works like a charm. I highly recommend it to everyone!"
+  },
+  {
+    imgURL: customer3,
+    customerName: 'Agha Bilal',
+    rating: 5.0,
+    feedback: "Amazing experience from start to finish. Customer service was top-notch and delivery was super fast!"
+  },
+  {
+    imgURL: customer4,
+    customerName: 'Rohit Sharma',
+    rating: 4.7,
+    feedback: "High-quality product and excellent support. I couldn’t be happier with my purchase!"
+  },
+  {
+    imgURL: customer5,
+    customerName: 'Minahil Afridi',
+    rating: 4.9,
+    feedback: "The product is fantastic! It’s exactly what I needed and the attention to detail is impressive."
+  },
+];
+
 
 // export const footerLinks = [
 //     {

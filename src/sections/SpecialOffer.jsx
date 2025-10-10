@@ -4,7 +4,6 @@ import Button from '../components/Button';
 import { motion } from 'framer-motion';
 import arrowRight from "../assets/icons/arrow-right.svg";
 
-const emptyIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E";
 
 function SpecialOffer() {
   return (
@@ -28,7 +27,7 @@ function SpecialOffer() {
 
       {/* Text Area */}
       <div className="flex flex-col gap-6 w-full lg:max-w-lg text-white">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
           <span className="block">Special</span>
           <span className="block bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
             Offer
@@ -42,7 +41,7 @@ function SpecialOffer() {
         {/* Buttons: wrap on small screens */}
         <div className="flex flex-wrap gap-4 sm:gap-7 mt-10">
           <Button label="Shop Now" iconURL={arrowRight} />
-          <Button label="Learn More" iconURL={emptyIcon} />
+          <Button label="Learn More" iconURL={arrowRight} />
         </div>
       </div>
     </motion.section>
