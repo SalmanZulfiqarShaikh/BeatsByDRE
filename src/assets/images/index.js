@@ -15,6 +15,9 @@ import product3 from './product3.jpg';
 import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 
+//Special offer
+import billie from './billieellish.jpg'
+
 export {
   HPhero1,
   HPhero2,
@@ -25,4 +28,5 @@ export {
   product4,
   product5,
     favicon,
+    billie
 };

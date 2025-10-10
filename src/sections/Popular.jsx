@@ -12,11 +12,10 @@ function Popular() {
     <motion.section
       id="products"
       className="w-full max-container mt-20 overflow-hidden"
-      //  Framer Motion animation settings
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }} // triggers when 30% is visible, also animates on scroll up
+      viewport={{ once: false, amount: 0.3 }}
     >
       {/* Header */}
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:px-8 z-20 md:ml-14">
@@ -57,18 +56,16 @@ function Popular() {
           {products.map((product, index) => (
             <SwiperSlide key={index}>
               <div
-                className="cursor-pointer flex flex-col items-center bg-[#0e0e0e]/90 p-5 rounded-2xl border border-gray-800 hover:border-pink-500/40 
-                shadow-[0_0_25px_rgba(236,72,153,0.08)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)]
-                backdrop-blur-sm"
+                className="cursor-pointer flex flex-col items-center bg-[#0e0e0e]/90 p-5 rounded-2xl border border-gray-800 
+                hover:border-pink-500/40 shadow-[0_0_25px_rgba(236,72,153,0.08)] transition-all duration-300 
+                hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] backdrop-blur-sm"
               >
                 <img
                   src={product.imgURL}
                   alt={product.name}
                   className="w-full h-64 object-cover rounded-lg mb-4"
                 />
-                <h4 className="text-lg font-semibold text-white">
-                  {product.name}
-                </h4>
+                <h4 className="text-lg font-semibold text-white">{product.name}</h4>
 
                 {/* Rating */}
                 <div className="flex items-center mt-2 gap-1">
@@ -89,9 +86,7 @@ function Popular() {
                   </span>
                 </div>
 
-                <p className="text-gray-400 mt-2 text-base font-medium">
-                  {product.price}
-                </p>
+                <p className="text-gray-400 mt-2 text-base font-medium">{product.price}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -110,22 +105,22 @@ function Popular() {
         </div>
 
         {/* Pagination */}
-        <div className="custom-pagination flex justify-center mt-10"></div>
+        <div className="custom-pagination flex justify-center mt-10 space-x-2">
+          {/* Swiper bullets will automatically be styled by Swiper */}
+        </div>
       </div>
 
-      {/* Pagination styling */}
-      <style jsx>{`
-        .custom-pagination .swiper-pagination-bullet {
-          background: linear-gradient(90deg, #ec4899, #fb923c);
-          opacity: 0.4;
-          transition: all 0.3s ease;
-        }
-        .custom-pagination .swiper-pagination-bullet-active {
-          opacity: 1;
-          width: 16px;
-          border-radius: 8px;
-        }
-      `}</style>
+      {/* Tailwind of Swiper pagination bullets */}
+      <style>
+        {`
+          .custom-pagination .swiper-pagination-bullet {
+            @apply bg-gradient-to-r from-pink-500 to-orange-400 opacity-40 transition-all duration-300 rounded-full;
+          }
+          .custom-pagination .swiper-pagination-bullet-active {
+            @apply opacity-100 w-4 rounded-full;
+          }
+        `}
+      </style>
     </motion.section>
   );
 }
