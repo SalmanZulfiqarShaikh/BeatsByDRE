@@ -14,6 +14,7 @@ function App() {
       <Services />
       <SpecialOffer/>
       <Testimonials/>
+      <Subscribe/>
     </>
   )
 }
