@@ -1,4 +1,4 @@
-// import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
+import {shieldTick, support, truckFast } from "../assets/icons";
 // import { HPhero1, HPhero2,HPhero3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailHP1, thumbnailHP2, thumbnailHP3 } from "../assets/images";
 import { HPhero1, HPhero2, HPhero3, product1, product2, product3, product4, product5 } from "../assets/images";
 
@@ -61,23 +61,23 @@ export const products = [
     }
 ];
 
-// export const services = [
-//     {
-//         imgURL: truckFast,
-//         label: "Free shipping",
-//         subtext: "Enjoy seamless shopping with our complimentary shipping service."
-//     },
-//     {
-//         imgURL: shieldTick,
-//         label: "Secure Payment",
-//         subtext: "Experience worry-free transactions with our secure payment options."
-//     },
-//     {
-//         imgURL: support,
-//         label: "Love to help you",
-//         subtext: "Our dedicated team is here to assist you every step of the way."
-//     },
-// ];
+export const services = [
+    {
+        imgURL: truckFast,
+        label: "Fast & Free Delivery",
+        subtext: "Get your gear delivered swiftly — free of charge, right to your door."
+    },
+    {
+        imgURL: shieldTick,
+        label: "Secure Payment",
+        subtext: "Shop confidently with end-to-end encrypted and verified payment options."
+    },
+    {
+        imgURL: support,
+        label: "24/7 Customer Care",
+        subtext: "Our support team is always ready to help — because your experience matters."
+    },
+];
 
 // export const reviews = [
 //     {

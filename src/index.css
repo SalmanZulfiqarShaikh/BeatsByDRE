@@ -77,3 +77,22 @@
     @apply text-gray-400 text-lg leading-7;
   }
 }
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-slide {
+  display: flex;
+  width: max-content;
+  animation: slide 25s linear infinite;
+  animation-play-state: running;
+}
+
+/* Key trick: duplicate content visually so loop has no gap */
+.animate-slide::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+}

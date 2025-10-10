@@ -8,7 +8,7 @@ import Typing from '../components/Typing.jsx'
 
 function Hero() {
   const [bigHP, setBigHP] = useState(headphones[0].bigHP)
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.3 })
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   return (
     <section

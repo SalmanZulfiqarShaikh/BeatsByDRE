@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import Popular from "./Popular";
 import Services from "./Services";
 import SpecialOffer from "./SpecialOffer";
-import SuperQuality from "./SuperQuality";
+import About from "./About";
 import Testimonials from "./Testimonials";
 import Subscribe from "./Subscribe";
 import Footer from "./Footer";
@@ -12,7 +12,7 @@ export {
     Popular,
     Services,
     SpecialOffer,
-    SuperQuality,
+    About,
     Testimonials,
     Subscribe,
     Footer

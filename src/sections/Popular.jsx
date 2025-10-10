@@ -51,7 +51,7 @@ function Popular() {
           {products.map((product, index) => (
             <SwiperSlide key={index}>
               <div
-                className="flex flex-col items-center bg-[#0e0e0e]/90 p-5 rounded-2xl border border-gray-800 hover:border-pink-500/40 
+                className="cursor-pointer flex flex-col items-center bg-[#0e0e0e]/90 p-5 rounded-2xl border border-gray-800 hover:border-pink-500/40 
                 shadow-[0_0_25px_rgba(236,72,153,0.08)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)]
                 backdrop-blur-sm"
               >

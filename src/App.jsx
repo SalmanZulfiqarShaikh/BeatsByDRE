@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css'
-import { Hero, Popular, Services, SpecialOffer, SuperQuality, Subscribe, Testimonials, Footer } from './sections'
+import { Hero, Popular, Services, SpecialOffer,About, Subscribe, Testimonials, Footer } from './sections'
 import Nav from './components/Nav'
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
       <Nav />
       <Hero />
       <Popular />
-      <SuperQuality/>
+      <About/>
+      <Services />
     </>
   )
 }
