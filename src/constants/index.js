@@ -32,26 +32,31 @@ export const products = [
     {
         imgURL: product1,
         name: "Beats Studio Pro",
+        rating: 4.8,
         price: "$349.99",
     },
     {
         imgURL: product2,
         name: "Beats Fit Pro",
+        rating: 4.6,
         price: "$199.99",
     },
     {
         imgURL: product3,
         name: "Beats Flex",
+        rating: 4.9,
         price: "$69.99",
     },
     {
         imgURL: product4,
         name: "Beats Solo 4",
+        rating: 4.8,
         price: "$199.99",
     },
     {
         imgURL: product5,
         name: "Beats Pill",
+        rating: 4.9,
         price: "$149.99",
     }
 ];

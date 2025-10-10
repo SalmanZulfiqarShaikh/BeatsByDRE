@@ -10,6 +10,7 @@ function App() {
       <Nav />
       <Hero />
       <Popular />
+      <SuperQuality/>
     </>
   )
 }

@@ -8,7 +8,7 @@ import Typing from '../components/Typing.jsx'
 
 function Hero() {
   const [bigHP, setBigHP] = useState(headphones[0].bigHP)
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 })
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.3 })
 
   return (
     <section
@@ -16,7 +16,7 @@ function Hero() {
       className="relative w-full flex xl:flex-row flex-col justify-between items-center 
                  min-h-[80vh] md:min-h-screen gap-10 max-container overflow-hidden"
     >
-      {/* ✅ MOBILE IMAGE SECTION (VISIBLE BELOW 768PX) */}
+      {/* MOBILE IMAGE SECTION */}
       <div className="flex flex-col md:hidden justify-center items-center mt-24">
         <img
           src={bigHP}
@@ -25,7 +25,7 @@ function Hero() {
           className="object-contain drop-shadow-xl"
         />
 
-        {/* ✅ MOBILE THUMBNAILS */}
+        {/*  MOBILE THUMBNAILS */}
         <div className="flex gap-4 sm:gap-6 mt-6 justify-center">
           {headphones.map((hp, index) => (
             <img
@@ -43,7 +43,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* ✅ LEFT TEXT SECTION */}
+      {/* LEFT TEXT SECTION */}
       <div className="relative xl:w-2/5 flex md:ml-14 flex-col justify-center items-center md:items-start 
                       w-full max-xl:px-8 pt-16 md:pt-28 z-20 text-center md:text-left">
         <h1 className="text-5xl sm:text-6xl font-bold leading-tight mt-4">
@@ -60,7 +60,7 @@ function Hero() {
           <Button label="Shop Now" iconURL={arrowRight} />
         </div>
 
-        {/* ✅ STATS SECTION */}
+        {/*  STATS SECTION */}
         <div
           ref={ref}
           className="flex justify-between items-center w-full mt-16 gap-4 text-xs sm:text-sm 
@@ -84,7 +84,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* ✅ DESKTOP IMAGE SECTION */}
+      {/*  DESKTOP IMAGE SECTION */}
       <div className="hidden md:flex mt-12 relative flex-col items-center">
         <img 
           src={bigHP}
