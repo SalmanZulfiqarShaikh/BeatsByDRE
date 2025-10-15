@@ -17,6 +17,7 @@ function Footer() {
   };
 
   return (
+    <section id="contact-us">
     <footer className="bg-zinc-950 text-white py-16 px-6 md:px-12 relative overflow-hidden">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-pink-500 via-orange-400 to-pink-500 blur-3xl"></div>
@@ -59,7 +60,7 @@ function Footer() {
         </div>
 
         {/* Right Section - Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-left flex-1 ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left flex-1 ">
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h4 className="font-semibold text-lg mb-4 bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
@@ -110,6 +111,7 @@ function Footer() {
         </span>
       </div>
     </footer>
+    </section>
   );
 }
 
