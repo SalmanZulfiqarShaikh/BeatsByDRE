@@ -73,7 +73,7 @@ function Hero() {
             >
               <p className="text-2xl sm:text-3xl md:text-3xl font-semibold">
                 {inView ? (
-                  <CountUp start={0} end={stat.value} duration={0.9} suffix={stat.suffix} />
+                  <CountUp start={0} end={stat.value} duration={1.9} suffix={stat.suffix} />
                 ) : (
                   0
                 )}
